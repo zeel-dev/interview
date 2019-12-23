@@ -3,6 +3,7 @@
 API design instructions for implementation of the Appointments service can be found in the swagger.yml file.
 We love creativity and curiosity! We are leaving it up to you on how you want to go about
 building and designing this CRUD project.
+We feel that documentation is part of designing. A form of endpoint documentation is expected.
 
 ### Tools & Libraries
 
