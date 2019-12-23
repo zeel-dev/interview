@@ -3,9 +3,12 @@ info:
   version: 1.0.0
   title: Appointments Service
   description: >-
-    - An appointment is a meeting between two people.
-    - This api is responsible for creating, editing, viewing and deleting these such meetings.
-    - This api is used from the perspective of a third party creating these meetings on someone else's behalf
+    This appointments service is an api used by a single third party Operator to schedule meetings on the
+    behalf of other people. Meeting invitees or attendees will not be able interact with the api directly
+    and as such implementing authentication will not be a concern.
+    
+    This api is responsible for creating, editing, viewing and deleting meetings scheduled by the Operator.
+    Additional requirements for the various functions of the api are listed as follows.
     Creating:
       - A meeting must have a physical location, a start time and a duration and at least 2 invitees.
     Deleting:
@@ -23,6 +26,56 @@ info:
 paths:
 components:
     schemas:
+      Person:
+        type: object
+        description: A person associated with a Meeting, whether they were invited or will be attending
+        properties:
+          first_name: 
+            type: string
+            description: The person's legal first name or given name
+            example: Jane
+          last_name:
+            type: string
+            description: The person's legal last name or surname
+            example: Doe
+      Location:
+        type: object
+        description: A physical location with an address
+        properties:
+          locality:
+            type: string
+            example: New York
+            description: The city or town.
+          line_1:
+            type: string
+            example: 45 West 45th Street
+            description: The street name and number.
+          line_2:
+            type: string
+            example: 16 Flr
+            description: The apartment number or floor number.
+          postal:
+            type: string
+            example: '10036'
+            description: The zip code/postal code.
+          region:
+            type: string
+            example: NY
+            description: The state/province/territory.
+      Meeting:
+        type: object
+        description: A scheduled assembly of people.
+        properties:
+          people:
+            type: array
+            items:
+              $ref: '#/components/schemas/Person'
+          start_time:
+            type: string
+            description: When the meeting will begin
+            example: 4pm EST
+          location:
+            $ref: '#/components/schemas/Location'
       Error:
         type: object
         description: Representation of a server error.
