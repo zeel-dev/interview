@@ -3,7 +3,7 @@ info:
   version: 1.0.0
   title: Appointments Service
   description: >-
-    This appointments service is an api used by a single third party Operator to schedule meetings on the
+    This appointments service is an api used by a single Operator to schedule meetings on the
     behalf of other people. Meeting invitees or attendees will not be able interact with the api directly
     and as such implementing authentication will not be a concern.
     
