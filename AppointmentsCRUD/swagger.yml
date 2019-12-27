@@ -6,18 +6,6 @@ info:
     This appointments service is an api used by a single Operator to schedule meetings on the
     behalf of other people. Meeting invitees or attendees will not be able interact with the api directly
     and as such implementing authentication will not be a concern.
-    
-    This api is responsible for creating, editing, viewing and deleting meetings scheduled by the Operator.
-    Additional requirements for the various functions of the api are listed as follows.
-    Creating:
-      - A meeting must have a physical location, a start time and a duration and at least 2 invitees.
-    Deleting:
-      - A meeting cannot be deleted within 2 hours of when it will take place.
-    Editing:
-      - A meeting cannot be edited within 2 hours of when it will take place.
-      - A meeting can be cancelled.
-    Viewing:
-      - Scheduled meeting should be able to be viewed and filtered (Cancelled, not cancelled, and all).
   termsOfService: https://www.zeel.com/terms
   contact:
     name: Zeel Networks, Inc.
