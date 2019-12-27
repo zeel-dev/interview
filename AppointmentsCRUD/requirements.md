@@ -2,7 +2,7 @@
 
 ## Background
 
-The year is 1995, you're the CEO of a tutoring startup, and you've got a problem. You're normally pretty organized, but it's been
+You're the CEO of a tutoring startup, and you've got a problem. You're normally pretty organized, but it's been
 getting more and more difficult to schedule appointments between your tutors and students as your business has grown. You decide
 that it's time to leverage some of those fancy web technologies you've been hearing so much about to build a solution to this
 problem in the form of an api that you will use to schedule appointments instead of writing them down with pen and paper.
