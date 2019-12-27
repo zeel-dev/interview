@@ -16,7 +16,7 @@ There are no expectations for front-end as this is primarily a back-end role.
 
 ### How to submit
 
-This coding challenge should take no longer than 3 hours.
+This coding challenge should take about 2 to 3 hours.
 
 You can email us a github link or share from your google drive.
 Please provide instructions for running and testing your application.
