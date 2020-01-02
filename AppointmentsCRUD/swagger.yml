@@ -3,8 +3,8 @@ info:
   version: 1.0.0
   title: Appointments Service
   description: >-
-    This appointments service is an api used by a single Operator to schedule meetings on the
-    behalf of other people. Meeting invitees or attendees will not be able interact with the api directly
+    This appointments service is an api used by a single Operator to schedule appointments on the
+    behalf of other people. Appointment invitees or attendees will not be able interact with the api directly
     and as such implementing authentication will not be a concern.
   termsOfService: https://www.zeel.com/terms
   contact:
@@ -16,7 +16,7 @@ components:
     schemas:
       Person:
         type: object
-        description: A person associated with a Meeting, whether they were invited or will be attending
+        description: A person associated with an Appointment, whether they were invited or will be attending
         properties:
           first_name: 
             type: string
@@ -50,7 +50,7 @@ components:
             type: string
             example: NY
             description: The state/province/territory.
-      Meeting:
+      Appointment:
         type: object
         description: A scheduled assembly of people.
         properties:
@@ -60,7 +60,7 @@ components:
               $ref: '#/components/schemas/Person'
           start_time:
             type: string
-            description: When the meeting will begin
+            description: When the appointment will begin
             example: 4pm EST
           location:
             $ref: '#/components/schemas/Location'
